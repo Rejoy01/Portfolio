@@ -5,6 +5,10 @@ import "./App.css";
 import Services from "./components/Services/Services";
 import Experience from "./components/Experience/Experience";
 import Work from "./components/Works/Work";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Testimonials from "./components/Testimonials/Testimonials";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 // import Experience from "./components/Experience/Experience";
 // import Works from "./components/Works/Works";
 // import Portfolio from "./components/Portfolio/Portfolio";
@@ -24,7 +28,10 @@ function App() {
       <Services />
       <Experience />
       <Work />
-    
+      <Portfolio />
+      <Testimonials />
+      <Contact />
+      <Footer />
     </div>
   );
 }
