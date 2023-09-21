@@ -6,8 +6,9 @@ import Fiver from'../../img/fiverr.png'
 import Amazon from'../../img/amazon.png'
 import Shopify from'../../img/Shopify.png'
 import Facebook from'../../img/Facebook.png'
-
+import {motion} from 'framer-motion'
 const Work = () => {
+  const transition ={duration:3.5,type:'spring'}
   return (
     <div className='works'>
             {/* left side */}
@@ -29,7 +30,13 @@ const Work = () => {
         {/* right side */}
       </div>
         <div className="w-right">
-            <div className="w-mainCircle">
+            <motion.div 
+              initial={{rotate:45}}
+              whileInView={{rotate:0}}
+              viewport={{margin:"-40px"}}
+              transition={transition}
+            
+            className="w-mainCircle">
                 <div className="w-secCircle">
                     <img src={Upwork} alt="" />
                 </div>
@@ -45,7 +52,7 @@ const Work = () => {
                 <div className="w-secCircle">
                     <img src={Facebook} alt="" />
                 </div>
-        </div>
+        </motion.div>
         {/* background circle */}
         <div className="w-backCircle blueCircle"></div>
         <div className="w-backCircle yellowCircle"></div>

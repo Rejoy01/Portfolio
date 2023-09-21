@@ -1,16 +1,18 @@
 import React from 'react'
 import './Services.css'
 
+import {motion} from 'framer-motion'
 import HeartEmoji from '../../img/heartemoji.png'
 import Glasses from '../../img/glasses.png'
 import Humble from '../../img/humble.png'
-import { EffectCards } from 'swiper'
+
 import Card from '../Card/Card'
 import Resume from './resume.pdf'
 
 const Services = () => {
+  const transition = {duration:3,type: 'spring'}
   return (
-    <div className='services'>
+    <div className='services' id='Services'>
       <div className='awesome'>
         {/* left side */}
         <span>My Awesome</span>
@@ -34,16 +36,20 @@ const Services = () => {
       {/* right side */}
       <div className='cards'>
           
-        <div style={{left:'14rem'}}>
+        <motion.div style={{left:'14rem'}}
+            initial={{left:'25%'}}
+            transition={transition}
+            whileInView={{left:'14rem'}}
+        >
             <Card 
             
             emoji ={HeartEmoji}
-            heading = 'Design'
-            detail = "Figna,sketch,photoshop,Adobe"
+            heading = 'Database'
+            detail = "Sql , Mongodb"
 
 
           />  
-        </div>
+        </motion.div>
            {/* Second card */}
         <div style={{ top:"12rem", left:"-4rem"}}>
             <Card 
@@ -59,7 +65,12 @@ const Services = () => {
 
           </div>
           {/* Third Card */}
-          <div style={{ top:"19rem", left:"12rem"}}>
+          <motion.div style={{ top:"19rem", left:"12rem"}}
+            initial={{left:'25rem'}}
+            whileInView={{left:'12rem'}}
+            transition={transition}
+
+          >
             <Card 
             
             emoji={Humble}
@@ -71,7 +82,7 @@ const Services = () => {
             />
 
 
-          </div>
+          </motion.div>
 
           <div className="blur s-blur2" style={{ background:"var(--purple"}}></div>
 
