@@ -32,3 +32,11 @@
     color: #5290fd;
 }
 
+@media screen and (max-width: 480px) {
+    .card{
+    
+        align-items: center;
+        left: 2.5rem;
+   
+    }
+}
